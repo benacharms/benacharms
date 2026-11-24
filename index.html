@@ -3,17 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>benacharms</title>
-<meta name="description" content="Originální ručně vyráběné přívěsky Bena charms. Kolekce, akce a objednávka přes Instagram.">
+<title>Bena charms | Ruční přívěsky na tašky, klíče a batohy</title>
+<meta name="description" content="Bena charms: originální ručně vyráběné přívěsky na tašky, klíče a batohy. Prohlédni si přívěsky, najdi nás na akcích a objednej přes Instagram.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Bena charms">
+<meta property="og:title" content="Bena charms | Ruční přívěsky na tašky, klíče a batohy">
 <meta property="og:description" content="Originální ručně vyráběné přívěsky. Prohlédni si kolekci a najdi nás na nejbližší akci.">
-<meta property="og:url" content="https://benacharms.github.io/benacharms/">
-<meta property="og:image" content="https://benacharms.github.io/benacharms/og.png">
+<meta property="og:url" content="https://benacharms.cz/">
+<link rel="canonical" href="https://benacharms.cz/">
+<meta name="robots" content="index,follow">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"Bena charms","url":"https://benacharms.cz/","logo":"https://benacharms.cz/icon.png","sameAs":["https://instagram.com/benacharms"],"description":"Originální ručně vyráběné přívěsky na tašky, klíče a batohy."},{"@type":"WebSite","name":"Bena charms","url":"https://benacharms.cz/","inLanguage":"cs"}]}</script>
+<meta property="og:image" content="https://benacharms.cz/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://benacharms.github.io/benacharms/og.png">
+<meta name="twitter:image" content="https://benacharms.cz/og.png">
 <link rel="icon" href="icon.png">
 <link rel="apple-touch-icon" href="icon.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500&family=Jost:wght@300;400;500&display=swap">
@@ -216,7 +219,7 @@ function $(i){return document.getElementById(i)}
 function kc(n){return n.toLocaleString("cs-CZ")+" Kč"}
 var ring='<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="32" cy="12" r="6"/><path d="M32 18v10"/><path d="M32 54c-12-8-18-14-18-21 0-5 4-8 8-8 4 0 8 3 10 6 2-3 6-6 10-6 4 0 8 3 8 8 0 7-6 13-18 21z"/></svg>';
 var CL="";
-function card(x){return '<div class="card'+(x.s?' so':'')+'"><div class="pic">'+(x.s?'<span class="badge">Vyprodáno</span>':'')+'<img src="'+x.i+'" alt="'+x.n+'"></div><h3>'+x.n+'</h3><p class="d">'+x.d+'</p><div class="row"><span class="price">'+kc(x.p)+'</span>'+(x.s?'<button class="add" disabled>Vyprodáno</button>':'<button class="add" data-id="'+x.id+'">Do košíku</button>')+'</div></div>'}
+function card(x){return '<div class="card'+(x.s?' so':'')+'"><div class="pic">'+(x.s?'<span class="badge">Vyprodáno</span>':'')+'<img src="'+x.i+'" alt="'+x.n+' – ruční přívěsek na tašku nebo klíče"></div><h3>'+x.n+'</h3><p class="d">'+x.d+'</p><div class="row"><span class="price">'+kc(x.p)+'</span>'+(x.s?'<button class="add" disabled>Vyprodáno</button>':'<button class="add" data-id="'+x.id+'">Do košíku</button>')+'</div></div>'}
 function rc(){var cs=["Vše"],seen={};P.forEach(function(x){if(!seen[x.c]){seen[x.c]=1;cs.push(x.c)}});$("cols").innerHTML='<div class="cl">Kolekce</div>'+cs.map(function(c){var on=(c=="Vše"&&!CL)||c==CL;return '<button class="chip'+(on?' on':'')+'" data-c="'+c+'">'+c+'</button>'}).join("")}
 function rg(){var so=$("so").value,L=P.filter(function(x){return !CL||x.c==CL});if(so)L.sort(function(a,b){return so=="a"?a.p-b.p:b.p-a.p});$("grid").innerHTML=L.map(card).join("");rc()}
 $("cols").onclick=function(e){var c=e.target.dataset.c;if(!c)return;CL=c=="Vše"?"":c;rg()};

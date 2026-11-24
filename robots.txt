@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://benacharms.cz/sitemap.xml
